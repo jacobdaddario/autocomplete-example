@@ -1,0 +1,11 @@
+<h1>Book Directory</h1>
+
+<form>
+  <%= text_field_tag :title %>
+</form>
+
+<ul>
+  <% @books.each do |book| %>
+    <%= content_tag :li, book.title %>
+  <% end %>
+</ul>
