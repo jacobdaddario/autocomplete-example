@@ -1,7 +1,9 @@
 class Book < ApplicationRecord
   def self.search_title(search)
-    return self.all unless search
-
-    return self.where("title like ?", "%#{search}%}")
+    if search.blank?
+      all
+    else
+      where('title LIKE ?', "%#{search}%")
+    end
   end
 end

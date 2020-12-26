@@ -1,11 +1,13 @@
 <h1>Book Directory</h1>
 
-<form>
-  <%= text_field_tag :title %>
-</form>
+<%= form_tag('/search', method: :get, data: { controller: "search" }) do %>
+  <%= text_field_tag :search, params[:search], data: { action: "input->search#findResults" } %>
+<% end %>
 
-<ul>
-  <% @books.each do |book| %>
-    <%= content_tag :li, book.title %>
-  <% end %>
-</ul>
+<div id="books">
+  <ul>
+    <% @books.each do |book| %>
+      <%= content_tag :li, book.title %>
+    <% end %>
+  </ul>
+</div>

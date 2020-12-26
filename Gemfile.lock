@@ -95,6 +95,8 @@ GEM
     listen (3.3.3)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    lodash-rails (4.17.15)
+      railties (>= 3.1)
     loofah (2.8.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -218,6 +220,7 @@ DEPENDENCIES
   hotwire-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  lodash-rails
   puma (~> 5.0)
   rails (~> 6.1.0)
   redis (~> 4.0)

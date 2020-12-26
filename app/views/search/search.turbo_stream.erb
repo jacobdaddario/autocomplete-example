@@ -1,0 +1,9 @@
+<turbo-stream action="update" target="books">
+  <template>
+    <ul>
+      <% @books.each do |book| %>
+        <%= content_tag :li, book.title %>
+      <% end %>
+    </ul>
+  </template>
+</turbo-stream>
